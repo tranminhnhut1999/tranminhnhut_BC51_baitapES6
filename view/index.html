@@ -21,7 +21,7 @@
             <div class="row">
               <div class="col-6 form-group">
                 <label for="">Mã : </label>
-                <input type="text" class="form-control" id="txtMaSV" />
+                <input type="text" class="form-control" id="id" />
                 <div
                   id="errorMaSV"
                   style="display: none" 
@@ -30,18 +30,27 @@
               </div>
               <div class="col-6 form-group">
                 <label for="">Họ và tên: </label>
-                <input type="text" class="form-control" id="txtTenSV" />
+                <input type="text" class="form-control" id="name" />
                 <div
                   id="errorTenSV"
                   style="display: none"
                   class="text-danger"
                 ></div>
               </div>
+                <div class="col-12 form-group">
+                  <label for="">Địa chỉ : </label>
+                  <input type="text" class="form-control" id="address" />
+                  <div
+                    id="errorMaSV"
+                    style="display: none" 
+                    class="text-danger"
+                  ></div>
+                </div>
             </div>
             <div class="row">
               <div class="col-6 form-group">
                 <label for="">Email : </label>
-                <input type="text" class="form-control" id="txtEmail" />
+                <input type="text" class="form-control" id="Email" />
                 <div
                   id="errorEmail"
                   style="display: none"
@@ -50,7 +59,7 @@
               </div>
               <div class="col-6 form-group">
                 <label for="">Loại người dùng </label>
-                <select name="" id="khSV" class="form-control">
+                <select name="" id="type" class="form-control">
                   <option>Chọn người dùng</option>
                   <option>Học Viên</option>
                   <option>Nhân Viên</option>
@@ -62,7 +71,7 @@
             <div class="row">
               <div class="col-4 form-group">
                 <label for="">Điểm toán : </label>
-                <input type="text" class="form-control" id="txtDiemToan" />
+                <input type="text" class="form-control" id="math" />
                 <div
                   id="errorDiemToan"
                   style="display: none"
@@ -71,7 +80,7 @@
               </div>
               <div class="col-4 form-group">
                 <label for="">Điểm lý : </label>
-                <input type="text" class="form-control" id="txtDiemLy" />
+                <input type="text" class="form-control" id="physical" />
                 <div
                   id="errorDiemLy"
                   style="display: none"
@@ -80,7 +89,7 @@
               </div>
               <div class="col-4 form-group">
                 <label for="">Điểm hóa : </label>
-                <input type="text" class="form-control" id="txtDiemHoa" />
+                <input type="text" class="form-control" id="chemistry" />
                 <div
                   id="errorDiemHoa"
                   style="display: none"
@@ -89,26 +98,35 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-4 form-group">
+              <div class="col-6 form-group">
                 <label for="">Ngày làm việc : </label>
-                <input type="text" class="form-control" id="nLamViec" />
+                <input type="text" class="form-control" id="workDays" />
+              </div>
+              <div class="col-6 form-group">
+                <label for="">Lương theo ngày : </label>
+                <input type="text" class="form-control" id="dailySalary" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4 form-group">
+                <label for="">Tên công ty : </label>
+                <input type="text" class="form-control" id="companyName" />
               </div>
               <div class="col-4 form-group">
-                <label for="">Lương theo ngày : </label>
-                <input type="text" class="form-control" id="lTheoNgay" />
+                <label for="">Trị giá hoá đơn : </label>
+                <input type="text" class="form-control" id="orderValue" />
               </div>
               <div class="col-4 form-group">
                 <label for="">Đánh giá : </label>
-                <input type="text" class="form-control" id="danhGia" />
+                <input type="text" class="form-control" id="rating" />
               </div>
             </div>
            <div class="form-group text-center">
               <button
-                id="btnThemSV"
+                id="KiemTra"
                 class="btn btn-success"
-                onclick="themSinhVien()"
               >
-                Thêm Sinh Viên
+                Kiểm tra
               </button>
               <button
                 id="btnCapNhatSV"
@@ -156,7 +174,5 @@
     ></script>
 
      <script type="module" src="../controllers/main.js"></script> 
-    <!--<script src="./sinhvien.js"></script>-->
-    <!--<script src="./oop.js"></script>
   </body>
 </html>
