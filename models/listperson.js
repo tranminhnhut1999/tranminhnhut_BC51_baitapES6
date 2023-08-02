@@ -3,18 +3,18 @@ export class ListPerson {
     this.list = [];
   }
 
-  addPerson(person) {
-    this.list.push(person);
+  addPerson(Person) {
+    this.list.push(Person);
   }
 
   removePerson(id) {
-    this.list = this.list.filter((person) => person.id !== id);
+    this.list = this.list.filter((Person) => Person.id !== id);
   }
 
   updatePerson(id, data) {
-    const person = this.list.find((person) => person.id === id);
-    if (person) {
-      Object.assign(person, data);
+    const Person = this.list.find((Person) => Person.id === id);
+    if (Person) {
+      Object.assign(Person, data);
     }
   }
 }
