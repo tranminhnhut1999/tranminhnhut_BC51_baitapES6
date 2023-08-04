@@ -60,16 +60,16 @@
               <div class="col-6 form-group">
                 <label for="">Loại người dùng </label>
                 <select name="" id="type" class="form-control">
-                  <option>Chọn người dùng</option>
-                  <option>Học Viên</option>
-                  <option>Nhân Viên</option>
-                  <option>Khách hàng</option>
+                  <option value="all">Chọn người dùng</option>
+                  <option value="Student">Học Viên</option>
+                  <option value="Employee">Nhân Viên</option>
+                  <option value="Customer">Khách hàng</option>
                 </select>
                 <div id="errorKH" style="display: none" class="text-danger"></div>
               </div>
             </div>
             <div class="row">
-              <div class="col-4 form-group">
+              <div class="col-4 form-group" id="txtMath">
                 <label for="">Điểm toán : </label>
                 <input type="text" class="form-control" id="math" />
                 <div
@@ -78,7 +78,7 @@
                   class="text-danger"
                 ></div>
               </div>
-              <div class="col-4 form-group">
+              <div class="col-4 form-group" id="txtPhysical">
                 <label for="">Điểm lý : </label>
                 <input type="text" class="form-control" id="physical" />
                 <div
@@ -87,7 +87,7 @@
                   class="text-danger"
                 ></div>
               </div>
-              <div class="col-4 form-group">
+              <div class="col-4 form-group" id="txtChemistry">
                 <label for="">Điểm hóa : </label>
                 <input type="text" class="form-control" id="chemistry" />
                 <div
@@ -98,25 +98,25 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6 form-group">
+              <div class="col-6 form-group" id="txtWorkDays">
                 <label for="">Ngày làm việc : </label>
                 <input type="text" class="form-control" id="workDays" />
               </div>
-              <div class="col-6 form-group">
+              <div class="col-6 form-group" id="txtDailySalary">
                 <label for="">Lương theo ngày : </label>
                 <input type="text" class="form-control" id="dailySalary" />
               </div>
             </div>
             <div class="row">
-              <div class="col-4 form-group">
+              <div class="col-4 form-group" id="txtCompanyName">
                 <label for="">Tên công ty : </label>
                 <input type="text" class="form-control" id="companyName" />
               </div>
-              <div class="col-4 form-group">
+              <div class="col-4 form-group" id="txtOrderValue">
                 <label for="">Trị giá hoá đơn : </label>
                 <input type="text" class="form-control" id="orderValue" />
               </div>
-              <div class="col-4 form-group">
+              <div class="col-4 form-group" id="txtRating">
                 <label for="">Đánh giá : </label>
                 <input type="text" class="form-control" id="rating" />
               </div>
@@ -129,6 +129,16 @@
               >
                 Kiểm tra
               </button>
+              <br>
+              <br>
+              <div class="col col-12">
+                <select id="fillterType" class="custom-select">
+                  <option value="all">Loc Doi Tuong</option>
+                  <option value="Student">Student</option>
+                  <option value="Employee">Employee</option>
+                  <option value="Customer">Customer</option>
+                </select>
+              </div>
               <button
                 id="btnCapNhatSV"
                 style="display: none"
