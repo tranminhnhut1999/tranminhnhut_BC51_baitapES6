@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Main</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -19,45 +19,7 @@
           <div class="col-6 mx-auto">
             <h3 class="display-4 text-center">Quản Lý Học Viên Nghiên Cứu và Giảng Dạy</h3>
             <div class="row">
-              <div class="col-6 form-group">
-                <label for="">Mã : </label>
-                <input type="text" class="form-control" id="id" />
-                <div
-                  id="errorMaSV"
-                  style="display: none" 
-                  class="text-danger"
-                ></div>
-              </div>
-              <div class="col-6 form-group">
-                <label for="">Họ và tên: </label>
-                <input type="text" class="form-control" id="name" />
-                <div
-                  id="errorTenSV"
-                  style="display: none"
-                  class="text-danger"
-                ></div>
-              </div>
-                <div class="col-12 form-group">
-                  <label for="">Địa chỉ : </label>
-                  <input type="text" class="form-control" id="address" />
-                  <div
-                    id="errorMaSV"
-                    style="display: none" 
-                    class="text-danger"
-                  ></div>
-                </div>
-            </div>
-            <div class="row">
-              <div class="col-6 form-group">
-                <label for="">Email : </label>
-                <input type="text" class="form-control" id="Email" />
-                <div
-                  id="errorEmail"
-                  style="display: none"
-                  class="text-danger"
-                ></div>
-              </div>
-              <div class="col-6 form-group">
+              <div class="col-12 form-group">
                 <label for="">Loại người dùng </label>
                 <select name="" id="type" class="form-control">
                   <option value="all">Chọn người dùng</option>
@@ -65,60 +27,127 @@
                   <option value="Employee">Nhân Viên</option>
                   <option value="Customer">Khách hàng</option>
                 </select>
-                <div id="errorKH" style="display: none" class="text-danger"></div>
+                <div
+                id="errorType"
+                class="text-danger"
+                style="display: none"
+              ></div>
+              </div>
+              <div class="col-6 form-group">
+                <label for="">Mã : </label>
+                <input type="text" class="form-control" id="id" />
+                <div
+                  id="errorId"
+                  style="display: none" 
+                  class="text-danger"
+                ></div>
+              </div>
+              <div class="col-6 form-group">
+                <label for="">Họ và tên: </label>
+                <input type="text" class="form-control" id="name" value required />
+                <div
+                  id="errorName"
+                  style="display: none"
+                  class="text-danger"
+                ></div>
+              </div>
+                <div class="col-12 form-group">
+                  <label for="">Địa chỉ : </label>
+                  <input type="text" class="form-control" id="address" value required />
+                  <div
+                    id="errorAddress"
+                    style="display: none" 
+                    class="text-danger"
+                  ></div>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-12 form-group">
+                <label for="">Email : </label>
+                <input type="text" class="form-control" id="Email" value required/>
+                <div
+                  id="errorEmail"
+                  style="display: none"
+                  class="text-danger"
+                ></div>
               </div>
             </div>
             <div class="row">
-              <div class="col-4 form-group" id="txtMath">
+              <div class="col-4 form-group" id="txtMath" style="display: none;" >
                 <label for="">Điểm toán : </label>
-                <input type="text" class="form-control" id="math" />
+                <input type="text" class="form-control" id="math" value required/>
                 <div
-                  id="errorDiemToan"
+                  id="errorMath"
                   style="display: none"
                   class="text-danger"
                 ></div>
               </div>
-              <div class="col-4 form-group" id="txtPhysical">
+              <div class="col-4 form-group" id="txtPhysical" style="display: none;">
                 <label for="">Điểm lý : </label>
-                <input type="text" class="form-control" id="physical" />
+                <input type="text" class="form-control" id="physical" value required/>
                 <div
-                  id="errorDiemLy"
+                  id="errorPhysical"
                   style="display: none"
                   class="text-danger"
                 ></div>
               </div>
-              <div class="col-4 form-group" id="txtChemistry">
+              <div class="col-4 form-group" id="txtChemistry" style="display: none;">
                 <label for="">Điểm hóa : </label>
-                <input type="text" class="form-control" id="chemistry" />
+                <input type="text" class="form-control" id="chemistry" value required/>
                 <div
-                  id="errorDiemHoa"
+                  id="errorChemistry"
                   style="display: none"
                   class="text-danger"
                 ></div>
               </div>
             </div>
             <div class="row">
-              <div class="col-6 form-group" id="txtWorkDays">
+              <div class="col-6 form-group" id="txtWorkDays" style="display: none;">
                 <label for="">Ngày làm việc : </label>
-                <input type="text" class="form-control" id="workDays" />
+                <input type="text" class="form-control" id="workDays" value required/>
+                <div
+                id="errorWorkDays"
+                style="display: none"
+                class="text-danger"
+              ></div>
               </div>
-              <div class="col-6 form-group" id="txtDailySalary">
+              <div class="col-6 form-group" id="txtDailySalary" style="display: none;">
                 <label for="">Lương theo ngày : </label>
-                <input type="text" class="form-control" id="dailySalary" />
+                <input type="text" class="form-control" id="dailySalary" value required/>
+                <div
+                id="errorDailySalary"
+                style="display: none"
+                class="text-danger"
+              ></div>
               </div>
             </div>
             <div class="row">
-              <div class="col-4 form-group" id="txtCompanyName">
+              <div class="col-4 form-group" id="txtCompanyName" style="display: none;">
                 <label for="">Tên công ty : </label>
-                <input type="text" class="form-control" id="companyName" />
+                <input type="text" class="form-control" id="companyName" value required/>
+                <div
+                id="errorCompanyName"
+                style="display: none"
+                class="text-danger"
+              ></div>
               </div>
-              <div class="col-4 form-group" id="txtOrderValue">
+              <div class="col-4 form-group" id="txtOrderValue" style="display: none;">
                 <label for="">Trị giá hoá đơn : </label>
-                <input type="text" class="form-control" id="orderValue" />
+                <input type="text" class="form-control" id="orderValue" value required/>
+                <div
+                id="errorOrderValue"
+                style="display: none"
+                class="text-danger"
+              ></div>
               </div>
-              <div class="col-4 form-group" id="txtRating">
+              <div class="col-4 form-group" id="txtRating" style="display: none;">
                 <label for="">Đánh giá : </label>
-                <input type="text" class="form-control" id="rating" />
+                <input type="text" class="form-control" id="rating" value required/>
+                <div
+                id="errorRating"
+                style="display: none"
+                class="text-danger"
+              ></div>
               </div>
             </div>
            <div class="form-group text-center">
@@ -129,16 +158,25 @@
               >
                 Kiểm tra
               </button>
+              <button  id="btnUpdate" type="button" class="btn btn-warning" style="display: none;">
+                Update
+              </button>
               <br>
               <br>
-              <div class="col col-12">
+              <div class="col col-10 d-flex">
                 <select id="fillterType" class="custom-select">
                   <option value="all">Loc Doi Tuong</option>
                   <option value="Student">Student</option>
                   <option value="Employee">Employee</option>
                   <option value="Customer">Customer</option>
                 </select>
+                <select id="fillterName" class="custom-select">
+                  <option value="all" selected>Loc Thu Tu Ho Ten</option>
+                  <option value="AdenZ">A den Z</option>
+                  <option value="ZdenA">Z den A</option>
+                </select>
               </div>
+              
               <button
                 id="btnCapNhatSV"
                 style="display: none"
@@ -149,22 +187,20 @@
             </div>
           </div>
         <div class="col-8 mx-auto">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th id='id'>Mã </th>
-                  <th id="name">Họ và tên</th>
-                  <th id="email">Email</th>
-                  <th id="dtb">Điểm Trung Bình</th>
-                  <th id="tLuong">Tổng Lương</th>
-                  <th id="tCongTy">Tên Công Ty</th>
-                  <th id="hoaDon">Trị giá hoá đơn</th>
-                  <th id="danhGia">Đánh giá</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody id="tbody"></tbody>
-            </table>
+          <table class="table table-striped">
+            <thead>
+              <tr class="text-white bg-danger">
+                <th>Ma</th>
+                <th>Ho Ten</th>
+                <th>Dia Chi</th>
+                <th>Email</th>
+                <th>Doi Tuong</th>
+                <th>Mo Ta</th>
+                <th>Thay Doi</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
           </div>
       </div>
     </div>
